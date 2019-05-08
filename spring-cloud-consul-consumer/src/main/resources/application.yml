@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: service-co
+        heartbeat:
+          enabled: true
+  application:
+    name: consul-consummer
+server:
+  port: 8508

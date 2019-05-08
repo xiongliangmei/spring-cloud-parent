@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: service-producers
+        heartbeat:
+          enabled: true
+  application:
+    name: consul-miya
+server:
+  port: 8507
