@@ -1,0 +1,27 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: service-config
+      profile: dev
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+management:
+  endpoints:
+    web:
+      exposure:
+        #暴露bus-refresh节点，通过此节点刷新配置
+        include: bus-refresh
